@@ -1,0 +1,13 @@
+RENAME TABLE employee TO employees;
+
+
+
+###Rename Multiple Tables
+RENAME TABLE
+employee TO employees,
+department TO departments;
+
+
+###Another syntax for one table
+ALTER TABLE employee
+RENAME TO employees;

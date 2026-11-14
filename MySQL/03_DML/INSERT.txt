@@ -1,0 +1,75 @@
+
+##Insert values for all columns
+
+INSERT INTO employee
+VALUES (101, 'Raj', 30000, 22, 'M', 'Pune', '2025-01-10');
+
+##Insert values for selected columns
+
+INSERT INTO employee
+(name, salary, age)
+VALUES ('Amit', 35000, 24);
+
+
+##Insert multiple records
+INSERT INTO employee
+VALUES
+(102, 'Amit', 35000, 24, 'M', 'Mumbai', '2025-02-15'),
+(103, 'Neha', 40000, 25, 'F', 'Pune', '2025-03-20'),
+(104, 'Ashu', 30000, 23, 'M', 'Kolhapur', '2025-03-24');
+
+##Insert multiple records with selected columns
+INSERT INTO employee
+(name, salary, age, city)
+VALUES
+('Riya', 45000, 26, 'Nashik'),
+('Sneha', 38000, 24, 'Pune'),
+('Pooja', 42000, 25, 'Mumbai');
+
+
+##Insert NULL value
+INSERT INTO employee
+(name, salary, age, gender, city, doj)
+VALUES
+('Karan', NULL, 23, 'M', 'Pune', '2025-05-10');
+
+
+##Insert using DEFAULT value
+INSERT INTO employee
+(name, salary)
+VALUES ('Vikas', 32000);
+
+
+##Insert using DEFAULT explicitly
+INSERT INTO employee
+(name, salary, city)
+VALUES ('Rohit', 30000, DEFAULT);
+
+
+##Insert data from another table
+INSERT INTO employee_backup
+SELECT *
+FROM employee;
+
+
+##Insert selected data from another table
+INSERT INTO employee_backup
+(name, salary)
+SELECT name, salary
+FROM employee;
+
+
+##With AUTO_INCREMENT
+INSERT INTO employee
+(name, salary, age, gender, city, doj)
+VALUES
+('Rajvardhan', 50000, 23, 'M', 'Pune', '2025-06-01');
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+-- Create a database
+CREATE DATABASE company;
+
+-- Display all databases
+SHOW DATABASES;
+
+-- Select a database
+USE company;
+
+-- Delete a database
+DROP DATABASE company;

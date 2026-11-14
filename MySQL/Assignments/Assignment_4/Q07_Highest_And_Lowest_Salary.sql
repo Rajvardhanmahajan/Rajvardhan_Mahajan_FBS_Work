@@ -1,0 +1,5 @@
+-- Q7) Display the highest and lowest salary.
+
+SELECT MAX(SALARY) AS HIGHEST_SALARY,
+       MIN(SALARY) AS LOWEST_SALARY
+FROM EMPLOYEES;

@@ -1,0 +1,81 @@
+-- Add a Single Column
+ALTER TABLE employee
+ADD email VARCHAR(100);
+
+-- Add Multiple Columns
+ALTER TABLE employee
+ADD phone VARCHAR(15),
+ADD address VARCHAR(100);
+
+--Check constraints
+ALTER TABLE employee
+MODIFY age INT CHECK(age>=18);
+
+-- Modify Data Type
+ALTER TABLE employee
+MODIFY name VARCHAR(100);
+
+-- Modify Data Type and Constraint
+ALTER TABLE employee
+MODIFY salary DECIMAL(12,2) NOT NULL;
+
+-- Rename Column
+ALTER TABLE employee
+RENAME COLUMN name TO emp_name;
+
+-- Drop a Column
+ALTER TABLE employee
+DROP COLUMN phone;
+
+-- Add Primary Key
+ALTER TABLE employee
+ADD PRIMARY KEY (emp_id);
+
+-- Add UNIQUE Constraint
+ALTER TABLE employee
+ADD CONSTRAINT unique_email UNIQUE (email);
+
+-- Add CHECK Constraint
+ALTER TABLE employee
+ADD CONSTRAINT check_age CHECK (age >= 18);
+
+-- Add Foreign Key
+ALTER TABLE employee
+ADD CONSTRAINT fk_dept
+FOREIGN KEY (dept_id)
+REFERENCES department(dept_id);
+
+-- Add Foreign Key with ON DELETE CASCADE
+ALTER TABLE employee
+ADD CONSTRAINT fk_dept
+FOREIGN KEY (dept_id)
+REFERENCES department(dept_id)
+ON DELETE CASCADE;
+
+-- Add Foreign Key with ON UPDATE CASCADE
+ALTER TABLE employee
+ADD CONSTRAINT fk_dept
+FOREIGN KEY (dept_id)
+REFERENCES department(dept_id)
+ON UPDATE CASCADE;
+
+-- Add Foreign Key with Both CASCADE
+ALTER TABLE employee
+ADD CONSTRAINT fk_dept
+FOREIGN KEY (dept_id)
+REFERENCES department(dept_id)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+-- Drop Foreign Key
+ALTER TABLE employee
+DROP FOREIGN KEY fk_dept;
+
+-- Drop UNIQUE Constraint
+ALTER TABLE employee
+DROP INDEX unique_email;
+
+-- Drop CHECK Constraint
+ALTER TABLE employee
+DROP CHECK check_age;
+

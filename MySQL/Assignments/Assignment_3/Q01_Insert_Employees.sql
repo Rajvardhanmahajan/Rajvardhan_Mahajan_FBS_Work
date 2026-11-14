@@ -1,0 +1,4 @@
+-- Q1) Insert the reference employee records into EMPLOYEES.
+-- Use the employee data provided in Assignment 3.
+--
+-- Insert the exact reference records from the assignment PDF here.

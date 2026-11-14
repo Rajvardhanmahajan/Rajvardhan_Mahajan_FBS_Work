@@ -1,0 +1,22 @@
+-- DDL
+CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+-- DML
+INSERT INTO student
+VALUES (101, 'Raj');
+
+-- DQL
+SELECT *
+FROM student;
+
+-- DML
+UPDATE student
+SET name = 'Rajvardhan'
+WHERE student_id = 101;
+
+-- DML
+DELETE FROM student
+WHERE student_id = 101;

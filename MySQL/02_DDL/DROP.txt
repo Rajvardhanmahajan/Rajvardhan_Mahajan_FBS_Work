@@ -1,0 +1,21 @@
+-- Drop Table
+DROP TABLE table_name;
+
+-- Drop Database
+DROP DATABASE database_name;
+
+-- Drop Table Only If It Exists
+DROP TABLE IF EXISTS tablename;
+
+-- Drop Database Only If It Exists
+DROP DATABASE IF EXISTS database;
+
+-- Drop View
+DROP VIEW employee_view;
+
+-- Drop Index
+DROP INDEX index_name ON employee;
+
+-- Drop Foreign Key
+ALTER TABLE employee
+DROP FOREIGN KEY fk_dept;

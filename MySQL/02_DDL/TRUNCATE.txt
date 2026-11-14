@@ -1,0 +1,12 @@
+
+-- Remove all records
+TRUNCATE TABLE employee;
+
+
+
+
+###TRUNCATE with AUTO_INCREMENT
+TRUNCATE TABLE employee;
+
+
+Note - This removes all rows and resets the table's AUTO_INCREMENT counter.

@@ -1,0 +1,26 @@
+##Delete one employee
+DELETE FROM employee
+WHERE emp_id = 101;
+
+
+##Delete employees from one department
+DELETE FROM employee
+WHERE dept_id = 3;
+
+
+##Delete employees based on salary
+DELETE FROM employee
+WHERE salary < 30000;
+
+
+##Delete using multiple conditions
+DELETE FROM employee
+WHERE dept_id = 1
+AND salary < 40000;
+
+
+##Delete using IN
+DELETE FROM employee
+WHERE dept_id IN (2, 4);
+
+

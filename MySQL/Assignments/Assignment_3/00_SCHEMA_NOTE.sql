@@ -1,0 +1,7 @@
+-- Assignment 3 - Schema Note
+-- Q5 and Q7 use EMAIL and COMMISSION_PCT.
+-- If these columns are missing from your current EMPLOYEES table, run:
+--
+-- ALTER TABLE EMPLOYEES
+-- ADD EMAIL VARCHAR(100),
+-- ADD COMMISSION_PCT DECIMAL(4,2);

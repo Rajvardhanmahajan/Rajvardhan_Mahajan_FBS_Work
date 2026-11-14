@@ -1,0 +1,60 @@
+####One-to-One
+
+CREATE TABLE person (
+    person_id INT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+CREATE TABLE passport (
+    passport_id INT PRIMARY KEY,
+    person_id INT UNIQUE,
+    FOREIGN KEY (person_id)
+    REFERENCES person(person_id)
+);
+
+
+
+###One-to-Many
+
+CREATE TABLE department (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
+);
+
+CREATE TABLE employee (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    dept_id INT,
+    FOREIGN KEY (dept_id)
+    REFERENCES department(dept_id)
+);
+
+One Department → Many Employees.
+
+
+
+
+###Many-to-Many
+
+CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+CREATE TABLE course (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(50)
+);
+
+CREATE TABLE enrollment (
+    student_id INT,
+    course_id INT,
+    PRIMARY KEY (student_id, course_id),
+    FOREIGN KEY (student_id)
+    REFERENCES student(student_id),
+    FOREIGN KEY (course_id)
+    REFERENCES course(course_id)
+);
+
+Many Students ↔ Many Courses.
+

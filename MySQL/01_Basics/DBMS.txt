@@ -1,0 +1,18 @@
+s-- Create database
+CREATE DATABASE company;
+
+-- Select database
+USE company;
+
+-- Create table
+CREATE TABLE employee (
+    emp_id INT,
+    name VARCHAR(50),
+    salary DECIMAL(10,2)
+);
+
+-- Display tables
+SHOW TABLES;
+
+-- Display table structure
+DESC employee;

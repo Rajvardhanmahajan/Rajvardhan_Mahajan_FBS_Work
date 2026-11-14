@@ -1,0 +1,70 @@
+Name - Rajvardhan Yogeshwar Mahajan
+FRN Number - FRN-05D0526/005
+Batch - May 2026 Data Analytics offline
+Set - A
+
+
+Q1)  SELECT name, salary
+     FROM employee
+     ORDER BY salary DESC;
+
+Q2) select name, salary
+     from employee
+     order by salary desc
+     limit 5;
+
+Q3) select * from employee
+     limit 5 offset 3;
+
+Q4) select dept_id, count(*) as employee_count
+     from employee
+     group by dept_id;
+
+Q5) select d.dept_name, AVG(e.salary) AS avg_salary
+     from employee e
+     inner join department d
+      on e.dept_id = d.dept_id
+     group by d.dept_name
+     having avg(e.salary) > 50000;
+
+Q6) select * from products
+     where product_name like '%Laptop%';
+
+
+Q7) select * from students 
+     where student_name like '___';
+
+
+Q8) select * from students
+     where student_name like 'A%';
+
+
+Q9) select month(order_date) as month,
+       count(*) as total_orders
+     from orders
+     group by month(order_date)
+     having count(*) > 100;
+
+
+Q10) select category,
+       sum(sales_amount) as total_sales,
+       avg(sales_amount) as avg_sales
+     from sales
+     group by category
+     having sum(sales_amount) > 100000;
+
+Q11) a) The total number of employees
+
+
+Q12) b) 8
+
+
+Q13) a) WHERE
+
+
+Q14) b) Returns all rows from the left table and matching rows from the right table
+
+
+Q15) a) hello world
+
+Q16) 

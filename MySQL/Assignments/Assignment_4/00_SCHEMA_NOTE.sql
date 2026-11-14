@@ -1,0 +1,4 @@
+-- Assignment 4 - Schema Note
+-- Q17 and Q20 use the JOBS table because the assignment asks
+-- for job roles such as Programmer and Shipping Clerk.
+-- EMPLOYEES is connected to JOBS using EMPLOYEES.JOB_ID = JOBS.JOB_ID.
